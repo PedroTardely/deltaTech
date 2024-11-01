@@ -1,0 +1,222 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+/* degrade */
+html,
+body {
+  height: auto;
+  min-height: 100vh;
+}
+/* 1 - quantos graus, 2 - rgba, 3 - porcentagem que começa, 4 - a cor que transiciona */
+html {
+  background: linear-gradient(180deg, #ff6500 0%, #1e3f63 100%);
+}
+/* quando o input estiver selecionado (focado) não tera borda */
+input:focus {
+  outline: none;
+}
+/* a sombra da caixa */
+#register-container {
+  max-width: 900px;
+  min-height: 80vh;
+  margin: 2rem auto;
+  display: flex;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 50px;
+}
+/* ajustando a imagem */
+#register-banner {
+  background: url("../img/wp.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+/* mudando a cor da imagem alterando a opacidade, o ultimo valor do rgba */
+#banner-layer {
+  background-color: rgba(30, 63, 99, 0.6);
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+/* para a quebra de linha ser bonita, você precisa do word-spacing, 50rem fica uma palavra por linha */
+#register-banner h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: #f2f2f2;
+  word-spacing: 50rem;
+}
+
+#register-form {
+  background-color: #1e3f63;
+  padding: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+label {
+  color: #f2f2f2;
+}
+
+#register-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  color: #f2f2f2;
+}
+
+#register-form p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #f2f2f2;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control label {
+  font-weight: bold;
+  padding: 0.6rem 0;
+}
+
+.form-control input {
+  border: none;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 0.6rem;
+  background-color: #1e3f63;
+}
+
+#open-generate-password {
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#open-generate-password:hover {
+  color: #0099ff;
+}
+
+#register-form #generated-password {
+  border: 1px solid #1e3f63;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+#register-form #generated-password p {
+  color: #FF6500;
+  margin-bottom: 0.5rem;
+}
+
+#register-form input[type="submit"],
+#generate-options button,
+#copy-password {
+  background-color: #697994;
+  color: #f7efe5;
+  opacity: 0.8;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 1.4rem;
+  max-width: 150px;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: all 0.4s ease;
+}
+
+#register-form input[type="submit"]:hover,
+#generate-options button,
+#copy-password {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* esse tem que ser depois do anterior */
+#register-form input[type="submit"]:active,
+#generate-options button,
+#copy-password {
+  transform: scale(0.9);
+}
+
+/* segunda versão */
+
+#generate-options {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #f2f2f2;
+}
+
+#generate-options .form-control {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#generate-options label {
+  font-size: 0.8rem;
+}
+
+#generate-options input[type="text"] {
+  max-width: 30px;
+  text-align: center;
+  border: 1px solid #f2f2f2;
+}
+
+#generate-options input[type="placeholder"] {
+  color: #ccc;
+}
+
+h4 {
+  color: #f2f2f2;
+}
+
+#generate-options button {
+  background-color: #0099ff;
+  display: block;
+  margin: 0 auto;
+}
+
+#copy-password {
+  margin: 1rem auto;
+  background-color: transparent;
+  border: 2px solid #c8a1e0;
+  color: #c8a1e0;
+  padding: 0.5rem 1rem;
+}
+
+.hide {
+    display: none;
+}
+
+@media(max-width: 450px) {
+  #banner-layer,
+  #register-banner{
+    display: none;
+  }
+
+  #register-form {
+    width: 100%;
+    border-radius: 50px;
+  }
+}

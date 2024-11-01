@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeltaTech</title>
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/styles-login.css" />
+    <!-- scripts -->
+    <script src="../js/scripts-login.js" defer></script>
+  </head>
+  <body>
+    <!-- Login -->
+    <div id="register-container">
+      <div id="register-banner">
+        <div id="banner-layer">
+          <h1>Seja bem-vindo</h1>
+        </div>
+      </div>
+      <div id="register-form">
+        <h2>Crie sua conta</h2>
+        <p>Registre-se para utilizar todas as funcionalidades do sistema</p>
+        <div class="form-control">
+          <label for="user">Usuário</label>
+          <input
+            type="text"
+            name="user"
+            id="user"
+            placeholder="Digite o nome de Usuário"
+          />
+        </div>
+        <div class="form-control">
+          <label for="user">E-mail</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Digite o seu e-mail"
+          />
+        </div>
+        <div class="form-control">
+          <label for="user">Senha</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Digite sua senha"
+          />
+        </div>
+        <p>
+          Gere uma senha de alta segurança.
+          <span id="open-generate-password">Clique aqui.</span>
+        </p>
+        <div id="generate-options" class="hide">
+          <p>Selecione como sua senha será gerada</p>
+          <div class="form-control">
+            <label for="length">Quantidade de caracteres:</label>
+            <input type="text" id="length" name="length" value="10" />
+          </div>
+          <div class="form-control">
+            <label for="letters">Letras:</label>
+            <input type="checkbox" id="letters" name="letters" checked />
+          </div>
+          <div class="form-control">
+            <label for="numbers">Números:</label>
+            <input type="checkbox" id="numbers" name="numbers" checked />
+          </div>
+          <div class="form-control">
+            <label for="symbols">Simbolos:</label>
+            <input type="checkbox" id="symbols" name="symbols" checked />
+          </div>
+          <button id="generate-password">Criar senha</button>
+        </div>
+        <div id="generated-password">
+          <p>Sua senha é:</p>
+          <h4></h4>
+          <button id="copy-password">Copiar</button>
+        </div>
+        <div class="form-control">
+          <label for="conrfim-password">Confirme sua senha</label>
+          <input
+            type="password"
+            name="conrfim-password"
+            id="conrfim-password"
+            placeholder="Confirme sua senha"
+          />
+        </div>
+        <input type="submit" value="Cadastrar" onclick="redirectBtn()"/>
+      </div>
+    </div>
+  </body>
+</html>
